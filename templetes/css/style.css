@@ -30,7 +30,9 @@ canvas:hover{
     color:black;
     font-size: medium;
     font-weight: 500;
-
+}
+.easy{
+    margin-top:50px;
 }
 
 #header{
