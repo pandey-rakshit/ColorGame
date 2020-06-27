@@ -1,6 +1,7 @@
 var won = false;
 var bool = false;
 var loose = false;
+$('#myModal').modal({ show: false});
 
 var lis = document.getElementsByClassName("nav-link");
 for(var i = 0;i < lis.length; i++){
@@ -78,6 +79,7 @@ function canvas(){
                     backgroundColor(co[i], "black");  
                     textChange(document.getElementById("new-color"), "Try Again?");
                     loose = true; 
+                    modal();
                    }
                 }
                 else{
@@ -158,3 +160,28 @@ function hard(bool,won,loose){
 }
 
 canvas();
+
+
+
+// modal
+function modal(){
+    // $('#myModal').modal('show');
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+    btn.onclick = function() {
+        $('#myModal').modal({ show: false})
+        modal.style.display = "none";
+        canvas();
+    }
+
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
