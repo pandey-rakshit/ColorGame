@@ -74,12 +74,11 @@ function canvas(){
                     textChange(document.getElementsByClassName("navbar-text")[0],"You Failed!"); 
                     backgroundColor(document.getElementById("header"), color[0].textContent);
                     for(let j = 0; j < co.length; j++){
-                        addClick(co[i]);
-                
-                    backgroundColor(co[i], "black");  
-                    textChange(document.getElementById("new-color"), "Try Again?");
-                    loose = true; 
-                    modal();
+                        addClick(co[j]);
+                        backgroundColor(co[i], "black");  
+                        textChange(document.getElementById("new-color"), "Try Again?");
+                        loose = true; 
+                        modal();
                    }
                 }
                 else{
